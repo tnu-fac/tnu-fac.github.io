@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفصل الثالث: التكامل</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            border-right: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .rule-box {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .rule-box:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .rule-title {
+            font-size: 1.3em;
+            color: #764ba2;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .rule-title span {
+            background: #764ba2;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            font-size: 0.9em;
+        }
+
+        .formula {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.3em;
+            text-align: center;
+            margin: 15px 0;
+            border: 2px dashed #667eea;
+            font-family: 'Courier New', monospace;
+            direction: ltr;
+        }
+
+        .example {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-right: 4px solid #ffc107;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .note {
+            background: #d1ecf1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-right: 4px solid #17a2b8;
+            color: #0c5460;
+        }
+
+        .highlight {
+            background: #ffeb3b;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 الفصل الثالث: التكامل</h1>
+            <p>قواعد التكامل الأساسية وتطبيقاتها</p>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2>🎯 قواعد التفاضل الأساسية</h2>
+                <p style="font-size: 1.1em; line-height: 1.8; color: #555; margin-bottom: 20px;">
+                    التكامل هو العملية العكسية للتفاضل. سنتعلم في هذا الفصل كيفية إيجاد التكامل باستخدام القواعد الأساسية.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>📐 أمثلة تطبيقية على التكامل</h2>
+
+                <div class="rule-box">
+                    <div class="rule-title">
+                        <span>1</span>
+                        المثال الأول
+                    </div>
+                    <div class="formula">
+                        ∫(x + 2)(3x - 4) dx
+                    </div>
+                    <div class="example">
+                        <div class="example-title">الحل:</div>
+                        <p style="line-height: 1.8;">
+                            <strong>الخطوة 1:</strong> نفك الأقواس أولاً<br>
+                            <span style="direction: ltr; display: inline-block;">(x + 2)(3x - 4) = 3x² - 4x + 6x - 8 = 3x² + 2x - 8</span><br><br>
+                            <strong>الخطوة 2:</strong> نكامل كل حد على حدة<br>
+                            <span style="direction: ltr; display: inline-block;">∫(3x² + 2x - 8) dx = x³ + x² - 8x + C</span>
+                        </p>
+                    </div>
+                    <div class="note">
+                        💡 <strong>ملاحظة:</strong> لا تنسَ إضافة ثابت التكامل C في النهاية!
+                    </div>
+                </div>
+
+                <div class="rule-box">
+                    <div class="rule-title">
+                        <span>2</span>
+                        المثال الثاني
+                    </div>
+                    <div class="formula">
+                        ∫(2x + 4)/x² - 1 dx
+                    </div>
+                    <div class="example">
+                        <div class="example-title">الحل:</div>
+                        <p style="line-height: 1.8;">
+                            <strong>الخطوة 1:</strong> نلاحظ أن البسط هو مشتقة المقام<br>
+                            <span style="direction: ltr; display: inline-block;">مشتقة (x² - 1) = 2x</span><br><br>
+                            <strong>الخطوة 2:</strong> نطبق قاعدة التكامل بالتعويض<br>
+                            <span style="direction: ltr; display: inline-block;">∫(2x + 4)/(x² - 1) dx = ln|x² - 1| + C</span>
+                        </p>
+                    </div>
+                    <div class="note">
+                        💡 <strong>ملاحظة:</strong> عندما يكون البسط مشتقة المقام، يكون التكامل هو <span class="highlight">ln|المقام| + C</span>
+                    </div>
+                </div>
+
+                <div class="rule-box">
+                    <div class="rule-title">
+                        <span>3</span>
+                        المثال الثالث
+                    </div>
+                    <div class="formula">
+                        ∫(x³ - 8)/(x - 2) dx
+                    </div>
+                    <div class="example">
+                        <div class="example-title">الحل:</div>
+                        <p style="line-height: 1.8;">
+                            <strong>الخطوة 1:</strong> نحلل البسط (فرق بين مكعبين)<br>
+                            <span style="direction: ltr; display: inline-block;">x³ - 8 = (x - 2)(x² + 2x + 4)</span><br><br>
+                            <strong>الخطوة 2:</strong> نبسط الكسر<br>
+                            <span style="direction: ltr; display: inline-block;">(x - 2)(x² + 2x + 4)/(x - 2) = x² + 2x + 4</span><br><br>
+                            <strong>الخطوة 3:</strong> نكامل<br>
+                            <span style="direction: ltr; display: inline-block;">∫(x² + 2x + 4) dx = x³/3 + x² + 4x + C</span>
+                        </p>
+                    </div>
+                    <div class="note">
+                        💡 <strong>تذكر:</strong> فرق المكعبين: a³ - b³ = (a - b)(a² + ab + b²)
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔄 استخدام قاعدة السلسلة بالعكس</h2>
+                <p style="font-size: 1.1em; line-height: 1.8; color: #555; margin-bottom: 20px;">
+                    قاعدة السلسلة في التفاضل يمكن استخدامها بالعكس في التكامل. هذه التقنية مفيدة جداً عندما يكون لدينا دالة مركبة.
+                </p>
+                <div class="rule-box">
+                    <div class="formula">
+                        إذا كان f'(g(x)) · g'(x)<br>
+                        فإن التكامل = f(g(x)) + C
+                    </div>
+                    <div class="note">
+                        💡 <strong>مفتاح النجاح:</strong> ابحث عن دالة داخلية ومشتقتها في التكامل
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" style="background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); border-right-color: #fdcb6e;">
+                <h2 style="color: #d63031;">📌 نصائح مهمة</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 10px 0; font-size: 1.1em;">✅ تأكد دائماً من تبسيط التعبير قبل التكامل</li>
+                    <li style="padding: 10px 0; font-size: 1.1em;">✅ لا تنسى ثابت التكامل C</li>
+                    <li style="padding: 10px 0; font-size: 1.1em;">✅ راجع قواعد التفاضل لتفهم التكامل بشكل أفضل</li>
+                    <li style="padding: 10px 0; font-size: 1.1em;">✅ تدرب على أنواع مختلفة من المسائل</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>📖 شرح الفصل الثالث - التكامل | تم التصميم بعناية لتسهيل الفهم</p>
+        </footer>
+    </div>
+</body>
+</html>
